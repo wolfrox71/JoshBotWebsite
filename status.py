@@ -1,6 +1,8 @@
 class status:
 	DEFAULT_STATUS = "RUNNING"
 	AVALABLE_STATUSES = ["RUNNING", "STOPPED"]
+	RUNNING_STATUSES = ["RUNNING"]
+	STOPPED_STATUSES = ["STOPPED"]
 	def __init__(self, filename):
 		self.filename = filename
 

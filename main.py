@@ -7,12 +7,12 @@ file = status("status.txt")
 
 @app.route("/")
 def index():
-	return "Index page"
+	return redirect(url_for("status_page"))
 
 @app.route("/status", methods = ["GET"])
 def status_page():
 	status = file.get_status()
-	return f"{status}"
+	return f"{status} <a href='{url_for('status_update')}'>Update</a>"
 
 
 @app.route("/status/update")
